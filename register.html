@@ -57,13 +57,15 @@
                             </div>
                           </div>
                         </div>
-                        <div class="mb-3">
+                        <div class="form-group mb-3 w-100">
                           <label for="password" class="form-label">Kata Sandi <span class="text-danger">*</span></label>
                           <input type="password" class="form-control" id="password">
+                          <span class="toggle-password toggle-password-attr" onclick="togglePassword()"><img src="assets/hide.png" width="20px"></span>
                         </div>
-                        <div class="mb-3">
+                        <div class="form-group mb-3 w-100">
                           <label for="confirm_password" class="form-label">Konfirmasi Kata Sandi <span class="text-danger">*</span></label>
                           <input type="password" class="form-control" id="confirm_password">
+                          <span class="toggle-confirm-password toggle-password-attr" onclick="toggleConfirmPassword()"><img src="assets/hide.png" width="20px"></span>
                         </div>
                         <a href="#" style="text-decoration: none; color: unset;"><p class="text-end">Lupa Password?</p></a>
                         <div class="d-grid gap-2">
@@ -78,5 +80,26 @@
         </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="jquery.js"></script>
   </body>
+  <script>
+    function togglePassword() {
+        if ($('#password').attr('type') === "password") {
+          $('#password').attr('type', "text");
+          $('.toggle-password').html("<img src='assets/hide.png' width='20px'>");
+        } else {
+          $('#password').attr('type','password');
+          $('.toggle-password').html("<img src='assets/show.png' width='20px'>");
+        }
+    }
+    function toggleConfirmPassword() {
+        if ($('#confirm_password').attr('type') === "password") {
+          $('#confirm_password').attr('type', "text");
+          $('.toggle-confirm-password').html("<img src='assets/hide.png' width='20px'>");
+        } else {
+          $('#confirm_password').attr('type','password');
+          $('.toggle-confirm-password').html("<img src='assets/show.png' width='20px'>");
+        }
+    }
+</script>
 </html>

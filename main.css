@@ -171,7 +171,7 @@ body{
     border-radius: 5px;
     font-size: 14px;
 }
-.form-group .toggle-password {
+.form-group .toggle-password-attr {
     position: absolute;
     right: 10px;
     top: 65%;
@@ -227,7 +227,6 @@ body{
 
 .item-option.active{
     color:#F64920 !important;
-    /* border-bottom: 4px solid #F64920; */
 }
 
 .item-option.active::after{
